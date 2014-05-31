@@ -1,0 +1,150 @@
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Grocery Stores</title>
+
+    <!-- Bootstrap core CSS -->
+    {% bootstrap_css %}
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/survey.css" %}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">South Waterfront</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-12">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Grocery Stores</h1>
+            <p>Select the store you prefer to shop at.</p>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                <img src="http://www.safeway.com/CMS/assets/media/images/safewayLogo.gif" alt="Safeway Logo">
+                <div class="caption">
+                  <h3>Safeway</h3>
+                  <p>We’re proud to be a part of local communities, and our customers can always count on us for great prices on the freshest produce and meat, plus thousands of everyday lower prices down every aisle. Our website offers recipes, meal tips and great options for healthier living. We also deliver groceries in many major U.S. cities and suburbs. Customers can order anytime from their home or office, or order on-the-go using our mobile app.</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                </div>
+              </div>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                <img src="http://portlandjazzfestival.org/wp-content/uploads/2014/01/ZM_logo_tag_stacked_blk72-200x82.jpg" alt="Zupan's Logo">
+                <div class="caption">
+                  <h3>Zupan's Markets</h3>
+                  <p>All the produce at Zupan’s is picture perfect: neatly stacked and not a brown spot in sight. The rest of the supermarket is equally gleaming and well stocked, including an extensive beer and wine selection, cheese aisle and olive bar. Much of what’s on offer is “organic,” “artisanal” or “heirloom”—sometimes all three. Expect to pay a little more than at Freddy’s, but head home feeling like a well-heeled socialite. Just don’t forget to bring your own bags.</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                </div>
+              </div>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                <img src="http://www.fredmeyer.com/SiteCollectionImages/common/banner_logo_header.gif" alt="Fred Meyer Logo">
+                <div class="caption">
+                  <h3>Fred Meyer</h3>
+                  <p>First and foremost, Fred G. Meyer was a retailer with a great idea: One-Stop Shopping. But he was more than that. He was also a philosopher, semanticist and teacher the Wall Street Journal once described as "the last of the great American entrepreneurs."</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                </div>
+              </div>
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="row">  
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                <img src="https://www.qfc.com/asset/53551a4984ae2db2ade0686e?data=1" alt="QFC Logo">
+                <div class="caption">
+                  <h3>QFC</h3>
+                  <p></p>
+                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                </div>
+              </div>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                <img src="http://www.avp.com/wp-content/uploads/Whole-Foods-Logo-1.jpg" alt="Whole Foods Logo">
+                <div class="caption">
+                  <h3>Whole Foods</h3>
+                  <p>No, this sleek, national chain of organic food and lifestyle porn is not where most of us will ever do our weekly grocery shopping. But it does have merit in terms of breadth of selection. It’ll allow you to gather ingredients for esoteric recipes, feed friends with special dietary needs and buy your favorite local coffee (Ristretto, Cellar Door, Water Ave.) and local bread (Ken’s, Pearl or Grand Central) without having to waste gas motoring to seven different specialty shops. The company’s exhaustively P.C. need to be everything to everyone means you can score gluten-free and vegan versions of most anything (from soy chorizo to Sweet Pea wheat-free brownies) as well as seven different sugar substitutes, raw food treats and probiotic supplements.</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                </div>
+              </div>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <div class="thumbnail">
+                <img src="http://abernethyschoolkitchengarden.files.wordpress.com/2012/12/nsm-color-logo-300dpi.jpg" alt="New Seasons">
+                <div class="caption">
+                  <h3>New Seasons</h3>
+                  <p>Like all New Seasons Markets, the Hawthorne store makes a big commitment to local products, carrying bountiful local choices from Stock Options frozen stock to Dulcet madras curry mustard to Bob’s Red Mill flours. And it still carries mass-market standbys such as Oreos and Pillsbury Crescent Rolls. While New Seasons may be harder on your wallet than other grocery stores, you’re compensated with five-star service. After searching for beef short ribs at the Freddy’s down the street, I called the Hawthorne New Seasons’ meat department to see if it carried the cut. After not finding it in the front counter, the butcher doubled-checked the fridge in the back. The short ribs were trimmed, wrapped and waiting when I arrived.</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                </div>
+              </div>
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div><!--/.container-->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    <script src="offcanvas.js"></script>
+  </body>
+</html>
