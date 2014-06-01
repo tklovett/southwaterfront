@@ -18,8 +18,8 @@ class Resident(models.Model):
 		("3", "$150-200"),
 		("4", "$200+"),
 	)
-	given_name = models.CharField(max_length=35)
-	family_name = models.CharField(max_length=35)
+	first_name = models.CharField(max_length=35)
+	last_name = models.CharField(max_length=35)
 	email = models.EmailField(unique=True)
 	monthly_spending = models.CharField(max_length=1, choices=SPENDING_CHOICES, blank=False, default="Choose one...")
 
