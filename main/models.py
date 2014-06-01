@@ -7,4 +7,4 @@ class GroceryStore(models.Model):
 	logo_url = models.URLField()
 
 	def __str__(self):
-		return "<GroceryStore: {0}>".format(name)
+		return "<GroceryStore: {0}>".format(self.name)
