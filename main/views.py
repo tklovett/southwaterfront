@@ -29,7 +29,7 @@ def resident(request):
                 vote.resident = new_resident
                 vote.store_id = store_id
                 vote.save()
-            return HttpResponseRedirect('/thanks/') # Redirect after POST
+            return HttpResponseRedirect('/') # Redirect after POST
     else:
         form = ResidentForm() # An unbound form
 

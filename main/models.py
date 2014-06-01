@@ -11,9 +11,17 @@ class GroceryStore(models.Model):
 
 
 class Resident(models.Model):
+	SPENDING_CHOICES = (
+		("0", "$0-50"),
+		("1", "$50-100"),
+		("2", "$100-150"),
+		("3", "$150-200"),
+		("4", "$200+"),
+	)
 	given_name = models.CharField(max_length=35)
 	family_name = models.CharField(max_length=35)
 	email = models.EmailField(unique=True)
+	monthly_spending = models.CharField(max_length=1, choices=SPENDING_CHOICES, blank=False, default="Choose one...")
 
 	def __str__(self):
 		return "<Resident: {0}>".format(self.email)

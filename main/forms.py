@@ -4,4 +4,4 @@ from models import Resident
 class ResidentForm(ModelForm):
 	class Meta:
 		model = Resident
-		fields = ['given_name', 'family_name', 'email']
+		fields = ['given_name', 'family_name', 'email', 'monthly_spending']

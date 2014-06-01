@@ -64,11 +64,19 @@
             <h1>Communication</h1>
             <p>Let your favorite grocery stores know you want them.</p>
           </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <form id="resident_info" action="/resident/" method="post" class="form-horizontal" role="form">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% buttons %}
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                {% endbuttons %}
+              </form>
+            </div>
+          </div>
         </div><!--/span-->
-        <form id="resident_info" action="/resident/" method="post">{% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Submit" />
-        </form>
+
       </div>
       <hr>
 
