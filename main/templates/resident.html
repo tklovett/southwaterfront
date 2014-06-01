@@ -61,34 +61,15 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>Grocery Stores</h1>
-            <p>Which of these stores would you shop at if they were in the South Waterfront?</p>
-            <button type="button" data-save class="btn btn-success btn-lg">Save and Continue</button>
+            <h1>Communication</h1>
+            <p>Let your favorite grocery stores know you want them.</p>
           </div>
-
-          {% for group in stores|group_by:3 %}
-          <div class="row">
-            {% for store in group %}
-            <div class="col-6 col-sm-6 col-lg-4">
-              <button type="button" class="thumbnail" value="{{ store.id }}">
-                <img src="{{ store.logo_url }}" alt="{{ store.name }} Logo">
-                <div class="caption text-left">
-                  <h3>{{ store.name }}</h3>
-                  <p>{{ store.description }}</p>
-                  <input type="hidden" value="{{ store.id }}">
-                  <p><a class="btn btn-primary" role="button">Choose</a></p>
-                </div>
-              </button>
-            </div><!--/span-->
-            {% endfor %}
-          </div> <!--end row-->
-          {% endfor %}
-
-          </div><!--/row-->
         </div><!--/span-->
-      <button type="button" data-save class="btn btn-success btn-lg">Save and Continue</button>
-
-
+        <form id="resident_info" action="/resident/" method="post">{% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
       <hr>
 
       <footer>
@@ -96,6 +77,11 @@
       </footer>
 
     </div><!--/.container-->
+
+    <div id="stores">
+      <input type="hidden" name="stores" value="{{ stores }}">
+    </div>
+
 
 
 
@@ -105,6 +91,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     {% bootstrap_javascript %}
     <script src="{% static 'js/offcanvas.js' %}"></script>
-    <script src="{% static 'js/survey.js' %}"></script>
+    <script src="{% static 'js/resident.js' %}"></script>
   </body>
 </html>

@@ -11,7 +11,17 @@ class GroceryStore(models.Model):
 
 
 class Resident(models.Model):
-	email = models.EmailField()
+	given_name = models.CharField(max_length=35)
+	family_name = models.CharField(max_length=35)
+	email = models.EmailField(unique=True)
 
 	def __str__(self):
 		return "<Resident: {0}>".format(self.email)
+
+
+class Vote(models.Model):
+	resident = models.ForeignKey('Resident')
+	store = models.ForeignKey('GroceryStore')
+
+	def __str__(self):
+		return "<Vote: {0} {1}>".format(self.resident, self.store)

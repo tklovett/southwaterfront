@@ -7,4 +7,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', home, name='home'),
     url(r'^survey/$', survey),
+    url(r'^resident/$', resident),
+    url(r'^thanks/$', thanks),
 )
