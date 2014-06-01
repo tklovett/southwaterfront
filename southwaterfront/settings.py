@@ -83,7 +83,6 @@ DATABASES = {}
 
 # Run local database if not production
 if not os.getenv('PRODUCTION', False):
-    print os.getenv('PRODUCTION', False)
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
