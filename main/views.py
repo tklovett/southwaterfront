@@ -1,6 +1,8 @@
 from django.shortcuts import render, HttpResponse
 from ipware.ip import get_ip
 
+from models import GroceryStore
+
 def home(request):
 	ip = get_ip(request)
 	ctx = {
@@ -9,4 +11,7 @@ def home(request):
 	return render(request, 'home.html', ctx)
 
 def survey(request):
-	return render(request, 'survey.html')
+	ctx = {
+		'stores': GroceryStore.objects.all()
+	}
+	return render(request, 'survey.html', ctx)
