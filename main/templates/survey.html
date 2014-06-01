@@ -62,21 +62,21 @@
           </p>
           <div class="jumbotron">
             <h1>Grocery Stores</h1>
-            <p>Select the store you prefer to shop at.</p>
+            <p>Which of these stores would you shop at if they were in the South Waterfront?</p>
           </div>
 
           {% for group in stores|group_by:3 %}
           <div class="row">
             {% for store in group %}
             <div class="col-6 col-sm-6 col-lg-4">
-              <div class="thumbnail">
+              <button type="button" class="thumbnail">
                 <img src="{{ store.logo_url }}" alt="{{ store.name }} Logo">
-                <div class="caption">
+                <div class="caption text-left">
                   <h3>{{ store.name }}</h3>
                   <p>{{ store.description }}</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Choose</a></p>
+                  <p><a class="btn btn-primary" role="button">Choose</a></p>
                 </div>
-              </div>
+              </button>
             </div><!--/span-->
             {% endfor %}
           </div> <!--end row-->
@@ -101,6 +101,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     {% bootstrap_javascript %}
-    <script src="offcanvas.js"></script>
+    <script src="{% static 'js/offcanvas.js' %}"></script>
+    <script src="{% static 'js/survey.js' %}"></script>
   </body>
 </html>
